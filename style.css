@@ -1,0 +1,110 @@
+*{
+  border: none;
+  padding: none;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.light{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+}
+.red{
+  width: 150px;
+  height: 10px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: black;
+  filter: blur(3px);
+  /* animation: megas 0.5s linear infinite; */
+  animation-delay: .25s;
+}
+.blue{
+  width: 150px;
+  height: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: black;
+  filter: blur(3px);
+  /* animation: mega 0.5s linear infinite; */
+  /* animation: flaser 0.5s linear infinite;  */
+  animation-delay: .25s;
+}
+
+@keyframes mega {
+  from{
+    box-shadow:  0 0 10px blue,
+     0 0 20px blue,
+     0 0 40px blue,
+     0 0 80px blue,
+     0 0 120px blue;
+  }
+  to{
+    background: black;
+    box-shadow: none;
+  }
+}
+@keyframes megas {
+  from{
+    box-shadow:  0 0 10px red,
+     0 0 20px red,
+     0 0 40px red,
+     0 0 80px red,
+     0 0 120px red;
+  }
+  to{
+    background: black;
+    box-shadow: none;
+  }
+}
+
+@keyframes flaser {
+  from{
+    box-shadow:  0 0 10px white,
+     0 0 20px white,
+     0 0 40px white,
+     0 0 80px white,
+     0 0 120px white;
+  }
+  to{
+    background: black;
+    box-shadow: none;
+  }
+}
+
+.btn_parent{
+color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 100px;
+gap: 30px;
+}
+.btn{
+padding: 5px 30px;
+background-color: transparent ;
+background-color: grey;
+border-radius: 20px;
+font-size: 17px;
+opacity: 0.6;
+transition: 0.3s all;
+}
+
+.btn:hover{
+opacity: 1;
+transform: scale(1.1);
+}
